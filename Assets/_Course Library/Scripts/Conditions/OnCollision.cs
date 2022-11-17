@@ -24,14 +24,14 @@ public class OnCollision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         OnEnter.Invoke(collision);
-        if (CanTriggerAction(collision.gameObject)) {
+        if (CanTriggerActionTag(collision.gameObject)) {
             OnEnterAction.Invoke(collision);
         }
     }
 
     private void OnCollisionExit(Collision collision) {
         OnExit.Invoke(collision);
-        if (CanTriggerAction(collision.gameObject)) {
+        if (CanTriggerActionTag(collision.gameObject)) {
             OnExitAction.Invoke(collision);
         }
     }
@@ -41,7 +41,7 @@ public class OnCollision : MonoBehaviour {
             collider.isTrigger = false;
     }
 
-    private bool CanTriggerAction(GameObject otherGameObject) {
+    private bool CanTriggerActionTag(GameObject otherGameObject) {
         if (requiredTag != string.Empty) {
             return otherGameObject.CompareTag(requiredTag);
         }
@@ -49,4 +49,6 @@ public class OnCollision : MonoBehaviour {
             return true;
         }
     }
+
+
 }
