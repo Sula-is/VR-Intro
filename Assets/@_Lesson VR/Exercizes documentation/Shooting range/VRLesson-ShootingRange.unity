@@ -2260,6 +2260,7 @@ GameObject:
   - component: {fileID: 1313711684}
   - component: {fileID: 1313711683}
   - component: {fileID: 1313711682}
+  - component: {fileID: 1313711685}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -2370,6 +2371,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 1313711680}
+--- !u!114 &1313711685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313711679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef09e95243cef843b49c6a1c6b55e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PrintInfo: 0
 --- !u!1 &1371017824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +2652,7 @@ GameObject:
   - component: {fileID: 1616918495}
   - component: {fileID: 1616918497}
   - component: {fileID: 1616918498}
+  - component: {fileID: 1616918499}
   m_Layer: 0
   m_Name: Grabbable
   m_TagString: Untagged
@@ -2930,6 +2945,23 @@ MonoBehaviour:
     type: 3}
   startPoint: {fileID: 337226177}
   launchSpeed: 1000
+--- !u!114 &1616918499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616918493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d80efa04b40363419ad95bd2f407c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Renderer:
+  - {fileID: 456594033}
+  _DefaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _HoveredColor: {r: 0.929, g: 0.094, b: 0.278, a: 1}
+  _SelectedColor: {r: 0.019, g: 0.733, b: 0.827, a: 1}
 --- !u!1 &1682824977
 GameObject:
   m_ObjectHideFlags: 0
