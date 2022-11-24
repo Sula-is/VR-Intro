@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/@_Lesson VR/Exercizes documentation/Shooting range/VRLesson-ShootingRange.unity
     guid: 5cd3fc9f31366014286b8b9ec4fff452
+  - enabled: 1
+    path: Assets/@_Lesson VR/Exercizes documentation/SwanFishing/VRLesson-SwanFishing.unity
+    guid: b08056790f387c44b83265ca1c222adb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ed72be55522c8448bae8b0d66fa21adf,
       type: 2}
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7738e6e9d82fd4d4485d46e1c91a275f,
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6b546c6137d38d243b6d572296ab0ec7,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ad4050bc0deda4e238354e959df0f1f4,
       type: 2}
