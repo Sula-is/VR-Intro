@@ -123,6 +123,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &127749745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162043757733048451, guid: b968c4018d98d8c45a1172e83fde60b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 274698510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &127749751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127749745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b9c72c7fa1d8d4c9769c40d4054ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _newInteractionLayerMask:
+    m_Bits: 8
 --- !u!1 &139200557
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +242,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1469770120}
     m_Modifications:
+    - target: {fileID: 3162043756208335439, guid: b968c4018d98d8c45a1172e83fde60b7,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162043756208335439, guid: b968c4018d98d8c45a1172e83fde60b7,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162043756208335439, guid: b968c4018d98d8c45a1172e83fde60b7,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162043756208335439, guid: b968c4018d98d8c45a1172e83fde60b7,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3162043756541128534, guid: b968c4018d98d8c45a1172e83fde60b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -282,6 +322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Belt
       objectReference: {fileID: 0}
+    - target: {fileID: 3162043757733048453, guid: b968c4018d98d8c45a1172e83fde60b7,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b968c4018d98d8c45a1172e83fde60b7, type: 3}
 --- !u!4 &274698511 stripped
@@ -290,25 +335,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 274698510}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &274698512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3162043756208335437, guid: b968c4018d98d8c45a1172e83fde60b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 274698510}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &274698513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274698512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e00bc40411c07e542a20484e0e62515c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _socketInteractor: {fileID: 0}
 --- !u!1 &348194689
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +907,7 @@ GameObject:
   - component: {fileID: 398327687}
   - component: {fileID: 398327686}
   - component: {fileID: 398327685}
+  - component: {fileID: 398327691}
   m_Layer: 0
   m_Name: Grab Interactable (1)
   m_TagString: Untagged
@@ -929,10 +956,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 398327691}
+        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
+        m_MethodName: ChangeLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 398327691}
+        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
+        m_MethodName: RestoreOriginalLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -1097,6 +1148,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &398327691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398327684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059c08e59b0e8445a165138d34ac93b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: {fileID: 398327685}
+  _newInteractionLayerMask:
+    m_Bits: 4
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1324,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyImmediate: 0
   _destroyDelay: 1
+--- !u!1 &606895520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162043756208335437, guid: b968c4018d98d8c45a1172e83fde60b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 274698510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &606895526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606895520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b9c72c7fa1d8d4c9769c40d4054ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _newInteractionLayerMask:
+    m_Bits: 8
 --- !u!1 &650672841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1392,6 @@ GameObject:
   - component: {fileID: 712900744}
   - component: {fileID: 712900743}
   - component: {fileID: 712900742}
-  - component: {fileID: 712900745}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1818,20 +1903,6 @@ MonoBehaviour:
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
   m_AnchorRotateReferenceFrame: {fileID: 0}
---- !u!114 &712900745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712900736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf14522d53cc1594991c164e785780dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceToggle: 0
-  directInteractor: {fileID: 1830626708}
 --- !u!1 &920921510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2280,7 @@ GameObject:
   - component: {fileID: 1304823344}
   - component: {fileID: 1304823343}
   - component: {fileID: 1304823342}
+  - component: {fileID: 1304823348}
   m_Layer: 0
   m_Name: Grab Interactable
   m_TagString: Untagged
@@ -2257,10 +2329,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1304823348}
+        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
+        m_MethodName: ChangeLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1304823348}
+        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
+        m_MethodName: RestoreOriginalLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -2425,6 +2521,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304823348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304823341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059c08e59b0e8445a165138d34ac93b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: {fileID: 1304823342}
+  _newInteractionLayerMask:
+    m_Bits: 4
 --- !u!1 &1313711679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3268,7 @@ GameObject:
   - component: {fileID: 2067401272}
   - component: {fileID: 2067401271}
   - component: {fileID: 2067401270}
+  - component: {fileID: 2067401276}
   m_Layer: 0
   m_Name: Grab Interactable (2)
   m_TagString: Untagged
@@ -3205,10 +3317,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 398327691}
+        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
+        m_MethodName: ChangeLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 398327691}
+        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
+        m_MethodName: RestoreOriginalLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -3373,6 +3509,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067401276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067401269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059c08e59b0e8445a165138d34ac93b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: {fileID: 2067401270}
+  _newInteractionLayerMask:
+    m_Bits: 4
 --- !u!1 &2124398258
 GameObject:
   m_ObjectHideFlags: 0
