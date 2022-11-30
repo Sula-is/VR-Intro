@@ -40,9 +40,8 @@ public class ChangeColorsOnInteractableEvents : MonoBehaviour {
     protected virtual void OnLastSelectExited(SelectExitEventArgs args) => UpdateColor();
 
     /// <summary>
-    /// Updates all the rendere
+    /// Updates all the renderers in the array with the appropriate color
     /// </summary>
-    /// <exception cref=""></exception>
     protected void UpdateColor() {
 
         Color color =
