@@ -39,16 +39,21 @@ public class ChangeColorsOnInteractableEvents : MonoBehaviour {
 
     protected virtual void OnLastSelectExited(SelectExitEventArgs args) => UpdateColor();
 
+    /// <summary>
+    /// Updates all the rendere
+    /// </summary>
+    /// <exception cref=""></exception>
     protected void UpdateColor() {
-        if (m_Renderer == null) {
-            throw new MissingReferenceException(nameof(m_Renderer));
-        }
+
         Color color =
             m_Interactable.isSelected ? _SelectedColor :
             m_Interactable.isHovered ? _HoveredColor :
             _DefaultColor;
 
         for (int i = 0; i < m_Renderer.Length; i++) {
+            if (m_Renderer[i] == null) {
+                throw new MissingReferenceException($"There is a null element in the array at index {i}");
+            }
             m_Renderer[i].material.color = color;
         }
     }

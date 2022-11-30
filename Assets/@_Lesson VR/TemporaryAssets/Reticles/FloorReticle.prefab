@@ -115,7 +115,7 @@ Transform:
   - {fileID: 4308048741146797340}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &3656424401358318142
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4308048741146797340}
-  - component: {fileID: 3811478689674646579}
+  - component: {fileID: 7942462324716289688}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -150,7 +150,7 @@ Transform:
   m_Father: {fileID: 1503954063649890211}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3811478689674646579
+--- !u!114 &7942462324716289688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,9 +159,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 3656424401358318142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffce327f5a9f06045b04d3799deea579, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fd6c40b7930f504f9241288b144597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _axisSelected: 1
+  m_UpdateType: 0
+  m_RotationInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Rotation Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: cfb6a7f0-c8a1-46c2-a7d6-f17d7723ec44
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: d720c64e-3a03-4e6f-9dde-385e3c4542d8
+        m_Path: <XRHMD>/centerEyeRotation
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Rotation Input
+        m_Flags: 0
+      - m_Name: 
+        m_Id: dca68f2c-37cb-4c8f-86a1-2314bba5053b
+        m_Path: <HandheldARInputDevice>/deviceRotation
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Rotation Input
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RotationAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  m_HasMigratedActions: 1
 --- !u!1 &7151210862511401803
 GameObject:
   m_ObjectHideFlags: 0
