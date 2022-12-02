@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0bdaf60a17bf16844a6cbd6fb382adb0, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -4653,7 +4653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &511342531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4811,8 +4811,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511342530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0532618, y: -0.9700727, z: -14.9144125}
-  m_LocalScale: {x: 1.2223, y: 1, z: 4.152372}
+  m_LocalPosition: {x: 1.636, y: -1.038, z: -9.1076}
+  m_LocalScale: {x: 1.3057615, y: 1, z: 3.1314273}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2075135193}
@@ -8865,7 +8865,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.3
+    limit: 1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -13914,7 +13914,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.3
+    limit: 1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -15358,7 +15358,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.3
+    limit: 1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -18432,6 +18432,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1314970616}
     m_Modifications:
+    - target: {fileID: 2902796248796882657, guid: a821c1acbdeeb1f409b669e077deae30,
+        type: 3}
+      propertyPath: m_LinearLimit.limit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2902796248796882671, guid: a821c1acbdeeb1f409b669e077deae30,
         type: 3}
       propertyPath: m_InteractionManager
