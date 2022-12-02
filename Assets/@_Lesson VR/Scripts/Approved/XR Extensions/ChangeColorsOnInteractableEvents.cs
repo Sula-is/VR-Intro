@@ -31,6 +31,8 @@ public class ChangeColorsOnInteractableEvents : MonoBehaviour {
         m_Interactable.lastSelectExited.RemoveListener(OnLastSelectExited);
     }
 
+
+    #region Interactable events
     protected virtual void OnFirstHoverEntered(HoverEnterEventArgs args) => UpdateColor();
 
     protected virtual void OnLastHoverExited(HoverExitEventArgs args) => UpdateColor();
@@ -38,6 +40,7 @@ public class ChangeColorsOnInteractableEvents : MonoBehaviour {
     protected virtual void OnFirstSelectEntered(SelectEnterEventArgs args) => UpdateColor();
 
     protected virtual void OnLastSelectExited(SelectExitEventArgs args) => UpdateColor();
+    #endregion
 
     /// <summary>
     /// Updates all the renderers in the array with the appropriate color

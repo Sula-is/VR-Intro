@@ -1,10 +1,19 @@
 using TMPro;
 
 using UnityEngine;
-
+/// <summary>
+/// Utility for text mesh pro component, need to be on the same object.
+/// Updates the text value
+/// </summary>
 public class UpdateText : MonoBehaviour {
-    [SerializeField]
     private TextMeshPro _txt;
+
+    private void Awake() {
+        _txt = GetComponent<TextMeshPro>();
+        if (!_txt) {
+            throw new MissingReferenceException("TextMeshPro");
+        }
+    }
 
     public void UpdateValue(string value) {
         _txt.text = value;
