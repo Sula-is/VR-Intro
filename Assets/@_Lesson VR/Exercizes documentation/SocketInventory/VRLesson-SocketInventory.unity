@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 3162043756541128534, guid: b968c4018d98d8c45a1172e83fde60b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 3162043756541128534, guid: b968c4018d98d8c45a1172e83fde60b7,
         type: 3}
@@ -958,8 +958,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 398327691}
-        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
-        m_MethodName: ChangeLayer
+        m_TargetAssemblyTypeName: ChangeMyInteractionLayer, Assembly-CSharp
+        m_MethodName: ChangeToNewLayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1103,7 +1103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 721c259f2a8eef541993f6657d6e433c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1375,7 +1375,6 @@ Transform:
   - {fileID: 920921511}
   - {fileID: 364578161}
   - {fileID: 712900737}
-  - {fileID: 1469770120}
   m_Father: {fileID: 1313711681}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2331,8 +2330,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1304823348}
-        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
-        m_MethodName: ChangeLayer
+        m_TargetAssemblyTypeName: ChangeMyInteractionLayer, Assembly-CSharp
+        m_MethodName: ChangeToNewLayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2476,7 +2475,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 721c259f2a8eef541993f6657d6e433c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2586,6 +2585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 650672842}
+  - {fileID: 1469770120}
   m_Father: {fileID: 1682824978}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2683,14 +2683,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469770119}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274698511}
-  m_Father: {fileID: 650672842}
-  m_RootOrder: 3
+  m_Father: {fileID: 1313711681}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1469770121
 MonoBehaviour:
@@ -2701,76 +2701,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 1469770119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fd6c40b7930f504f9241288b144597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackingType: 2
+  _axisSelected: 0
+  m_XROrigin: {fileID: 1313711680}
   m_UpdateType: 0
-  m_PositionInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Position
-      m_Type: 0
-      m_ExpectedControlType: Vector3
-      m_Id: 4dbfbe7b-17e7-4f79-850b-c201e8c150ac
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 7e032e6d-a7d3-4506-9738-ae6666eebbce
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 7c31dec6-302c-4acb-81d8-618b591e1b3e
-        m_Path: <HandheldARInputDevice>/devicePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
   m_RotationInput:
     m_UseReference: 0
     m_Action:
-      m_Name: Rotation
+      m_Name: Rotation Input
       m_Type: 0
-      m_ExpectedControlType: Quaternion
-      m_Id: 61ebd82e-6033-4807-8a46-796ca18ccc59
+      m_ExpectedControlType: 
+      m_Id: 9fbd99d9-b4b1-4a32-9cf4-652f4c70cd9a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 5ce03de4-fad0-4f2d-807b-65c3dea8b4c8
+        m_Id: 77dbb3c3-4f64-4270-b3ec-14e0a7b70e2e
         m_Path: <XRHMD>/centerEyeRotation
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Rotation
+        m_Action: Rotation Input
         m_Flags: 0
       - m_Name: 
-        m_Id: d770c2d4-7e67-4049-9836-c4f91b571070
+        m_Id: dbbfef27-b4ab-497c-aa3a-6a6cdba5a120
         m_Path: <HandheldARInputDevice>/deviceRotation
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Rotation
+        m_Action: Rotation Input
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PositionAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   m_RotationAction:
     m_Name: 
     m_Type: 0
@@ -3319,8 +3283,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 398327691}
-        m_TargetAssemblyTypeName: ChangeInteractionLayer, Assembly-CSharp
-        m_MethodName: ChangeLayer
+        m_TargetAssemblyTypeName: ChangeMyInteractionLayer, Assembly-CSharp
+        m_MethodName: ChangeToNewLayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3464,7 +3428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 721c259f2a8eef541993f6657d6e433c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -12,10 +12,7 @@ namespace Sula {
     [AddComponentMenu("XR/Tracked Pose Driver (Input System)")]
     [Serializable]
     public class TrackedRotationDriver : MonoBehaviour, ISerializationCallbackReceiver {
-        /// <summary>
-        /// Options for which <see cref="Transform"/> properties to update.
-        /// </summary>
-        /// <seealso cref="axis"/>
+
         public enum Axis {
             x, y, z
         }
@@ -39,8 +36,6 @@ namespace Sula {
             get => m_XROrigin;
             set => m_XROrigin = value;
         }
-
-
 
         /// <summary>
         /// Options for which phases of the player loop will update <see cref="Transform"/> properties.

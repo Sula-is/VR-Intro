@@ -3,7 +3,9 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
-
+/// <summary>
+/// Utility for Interactors, handles changing the interactable layer when the hover event is called
+/// </summary>
 public class ChangeInteractionLayer : MonoBehaviour {
 
     private XRBaseInteractor _interactor;
@@ -58,7 +60,7 @@ public class ChangeInteractionLayer : MonoBehaviour {
 
         if (_InteractableHovering) {
             _oldInteractionLayerMask = _interactable.interactionLayers;
-            NewLayer();
+            ChangeToNewLayer();
         }
         else {
             RestoreOriginalLayer();
@@ -67,7 +69,7 @@ public class ChangeInteractionLayer : MonoBehaviour {
     }
 
     [Button]
-    public void NewLayer() {
+    public void ChangeToNewLayer() {
         Debug.Log("New layer set");
         _interactable.interactionLayers = _newInteractionLayerMask;
     }
@@ -77,4 +79,5 @@ public class ChangeInteractionLayer : MonoBehaviour {
         Debug.Log("Old layer restored");
         _interactable.interactionLayers = _oldInteractionLayerMask;
     }
+
 }
