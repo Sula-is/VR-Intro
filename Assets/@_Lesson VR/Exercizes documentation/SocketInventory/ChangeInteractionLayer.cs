@@ -56,7 +56,7 @@ public class ChangeInteractionLayer : MonoBehaviour {
 
     private void SetLayer(XRBaseInteractable interactable) {
 
-        Debug.Log($"the interactable is {interactable} the hover is {_InteractableHovering}");
+        //Debug.Log($"the interactable is {interactable} the hover is {_InteractableHovering}");
 
         if (_InteractableHovering) {
             _oldInteractionLayerMask = _interactable.interactionLayers;
@@ -70,13 +70,11 @@ public class ChangeInteractionLayer : MonoBehaviour {
 
     [Button]
     public void ChangeToNewLayer() {
-        Debug.Log("New layer set");
         _interactable.interactionLayers = _newInteractionLayerMask;
     }
 
     [Button]
     public void RestoreOriginalLayer() {
-        Debug.Log("Old layer restored");
         _interactable.interactionLayers = _oldInteractionLayerMask;
     }
 
