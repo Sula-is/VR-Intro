@@ -24,15 +24,8 @@ internal class Swan : MonoBehaviour {
     /// <summary>
     /// I'm initializing the swan with a value
     /// </summary>
-    public Swan() {
+    public void Start() {
         // TO DO Remove the magic numbers, use a "SwanGenerator" to instantiate all the swans
         AssignValue(0, 10);
     }
-
-    private void OnEnable() {
-        //On enable I want to comunicate my value
-        ValueUpdated.Invoke(_value);
-    }
-
-
 }

@@ -9,7 +9,7 @@ public class UpdateText : MonoBehaviour {
     private TextMeshPro _txt;
 
     private void Awake() {
-        _txt = GetComponent<TextMeshPro>();
+        _txt = GetComponentInChildren<TextMeshPro>();
         if (!_txt) {
             throw new MissingReferenceException("TextMeshPro");
         }
