@@ -99,7 +99,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: 555f386bf59c55f47ab2ed0abb0e4d83, type: 3}
+        m_Texture: {fileID: 8900000, guid: a66a40796b804c74c899c3629c02cb54, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
